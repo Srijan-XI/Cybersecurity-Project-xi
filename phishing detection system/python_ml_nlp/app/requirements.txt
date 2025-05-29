@@ -1,0 +1,23 @@
+# Core Web Framework
+Flask==2.3.3
+
+# Machine Learning
+scikit-learn==1.4.1
+joblib==1.4.2
+
+# Natural Language Processing
+nltk==3.8.1
+
+# URL/HTTP handling
+requests==2.31.0
+tldextract==3.6.1
+
+# Utilities
+numpy==1.26.4
+pandas==2.2.2
+
+# Security / Input sanitization
+Werkzeug==2.3.8
+
+# Flask CORS (for API gateway communication)
+flask-cors==4.0.0
