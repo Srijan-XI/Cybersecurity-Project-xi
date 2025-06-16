@@ -1,2 +1,1 @@
-# Cybersecurity-Project-xi
-This repository contains cybersecurity projects developed during my college tenure, showcasing practical applications and explorations in the field.
+This repository features a collection of cybersecurity projects developed as part of my academic journey. Each project demonstrates practical implementations, tools, and techniques explored in the domain of cybersecurity, reflecting hands-on learning and applied knowledge gained during my college years.
