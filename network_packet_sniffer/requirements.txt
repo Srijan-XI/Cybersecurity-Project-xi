@@ -1,0 +1,12 @@
+pip install colorama
+pip install requests
+pip install scapy
+pip install pycryptodome
+pip install pycryptodomex
+pip install pyasn1
+pip install pyasn1-modules
+pip install dnspython
+pip install cryptography
+pip install netifaces
+pip install pypcapfile
+pip install scapy-http
