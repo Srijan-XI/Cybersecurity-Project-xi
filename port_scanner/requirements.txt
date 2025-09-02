@@ -1,0 +1,17 @@
+# Port Scanner Requirements
+# This project uses only Python standard libraries
+
+# No external dependencies required
+# All functionality is built using:
+# - socket (network operations)
+# - threading (multi-threading)
+# - ipaddress (IP validation)
+# - queue (thread-safe queues)
+# - argparse (command line parsing)
+# - time (timing operations)
+# - signal (signal handling)
+# - sys, os (system operations)
+
+# For development/testing (optional):
+# pytest>=6.0
+# flake8>=3.8

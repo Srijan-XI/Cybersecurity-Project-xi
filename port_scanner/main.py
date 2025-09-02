@@ -1,6 +1,6 @@
-from .scanner.utils import validate_ip, validate_port_range
-from .scanner.port_scanner import run_scanner
-from .config import DEFAULT_START_PORT, DEFAULT_END_PORT, DEFAULT_THREAD_COUNT
+from scanner.utils import validate_ip, validate_port_range
+from scanner.port_scanner import run_scanner
+from config import DEFAULT_START_PORT, DEFAULT_END_PORT, DEFAULT_THREAD_COUNT
 
 def main():
     ip = input("Enter target IP: ").strip()
@@ -17,6 +17,7 @@ def main():
 
     if not validate_port_range(start_port, end_port):
         print("Invalid port range.")
+        print("Start port must be less than or equal to end port, and both must be within 1-65535.")
         return
 
     print(f"Scanning {ip} from port {start_port} to {end_port}...\n")

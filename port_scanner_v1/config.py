@@ -1,5 +1,4 @@
-# Create config.py
-config_content = '''# Configuration settings for the port scanner
+# Configuration settings for the port scanner
 
 # Default port range
 DEFAULT_START_PORT = 1
@@ -25,9 +24,3 @@ COMMON_SERVICES = {
     993: "IMAPS",
     995: "POP3S"
 }
-'''
-
-with open('port_scanner/config.py', 'w') as f:
-    f.write(config_content)
-
-print("Created config.py")
