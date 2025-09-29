@@ -11,7 +11,7 @@ import (
 )
 
 var (
-	logFile   = "../outputs/logs/netscan.log"
+	logFile   = "outputs/logs/netscan.log"
 	openPorts = []int{21, 22, 23, 80, 443, 3306, 8080}
 	wg        sync.WaitGroup
 	fileMutex sync.Mutex // Add a mutex for file writes

@@ -1,31 +1,10 @@
 SSL/TLS Certificate Report
 ========================================
 
-Host: fast.com
-Issuer: {b'C': b'US', b'O': b'DigiCert Inc', b'CN': b'DigiCert TLS RSA SHA256 2020 CA1'}
-Subject: {b'C': b'US', b'ST': b'California', b'L': b'Los Gatos', b'O': b'Netflix', b'CN': b'fast.com'}
-Valid From: 2024-11-22
-Valid To: 2025-11-22
-Status: Valid (158 days left)
-
-Host: facebook.com
-Issuer: {b'C': b'US', b'O': b'DigiCert Inc', b'OU': b'www.digicert.com', b'CN': b'DigiCert SHA2 High Assurance Server CA'}
-Subject: {b'C': b'US', b'ST': b'California', b'L': b'Menlo Park', b'O': b'Meta Platforms, Inc.', b'CN': b'*.facebook.com'}
-Valid From: 2025-03-26
-Valid To: 2025-06-24
-Status: Expiring Soon (7 days left)
-
-Host: google.com
-Issuer: {b'C': b'US', b'O': b'Google Trust Services', b'CN': b'WR2'}
-Subject: {b'CN': b'*.google.com'}
-Valid From: 2025-05-19
-Valid To: 2025-08-11
-Status: Valid (55 days left)
-
-Host: github.com
-Issuer: {b'C': b'GB', b'ST': b'Greater Manchester', b'L': b'Salford', b'O': b'Sectigo Limited', b'CN': b'Sectigo ECC Domain Validation Secure Server CA'}
-Subject: {b'CN': b'github.com'}
-Valid From: 2025-02-05
-Valid To: 2026-02-05
-Status: Valid (233 days left)
+Host: meta.com
+Issuer: {b'C': b'US', b'O': b'DigiCert Inc', b'CN': b'DigiCert Global G2 TLS RSA SHA256 2020 CA1'}
+Subject: {b'C': b'US', b'ST': b'California', b'L': b'Menlo Park', b'O': b'Meta Platforms, Inc.', b'CN': b'*.meta.com'}
+Valid From: 2025-07-08
+Valid To: 2025-10-06
+Status: Expiring Soon (6 days left)
 

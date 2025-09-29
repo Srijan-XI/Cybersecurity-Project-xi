@@ -29,10 +29,33 @@ void Scanner::loadSignatures(const std::string& filepath) {
 
 void Scanner::scanDirectory() {
     std::ofstream log(logFile);
-    for (const auto& entry : fs::recursive_directory_iterator(targetDir)) {
-        if (entry.is_regular_file()) {
-            scanFile(entry.path().string());
+    if (!log) {
+        std::cerr << "[-] Unable to create log file: " << logFile << std::endl;
+        return;
+    }
+    
+    try {
+        if (!fs::exists(targetDir)) {
+            std::cout << "[-] Target directory does not exist: " << targetDir << std::endl;
+            log << "[-] Target directory does not exist: " << targetDir << std::endl;
+            return;
         }
+        
+        bool found_files = false;
+        for (const auto& entry : fs::recursive_directory_iterator(targetDir)) {
+            if (entry.is_regular_file()) {
+                found_files = true;
+                scanFile(entry.path().string());
+            }
+        }
+        
+        if (!found_files) {
+            std::cout << "[*] No files found in directory: " << targetDir << std::endl;
+            log << "[*] No files found in directory: " << targetDir << std::endl;
+        }
+    } catch (const fs::filesystem_error& ex) {
+        std::cerr << "[-] Filesystem error: " << ex.what() << std::endl;
+        log << "[-] Filesystem error: " << ex.what() << std::endl;
     }
 }
 

@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <stdexcept>
 
 FileManager::FileManager(const std::string& dbPath) : dbFilePath(dbPath) {}
 
@@ -10,18 +11,29 @@ void FileManager::loadDatabase() {
     std::ifstream dbFile(dbFilePath);
     if (!dbFile) {
         // Database file doesn't exist yet; no action required.
+        std::cout << "Database file not found. Starting with empty database." << std::endl;
         return;
     }
 
     std::string line;
     while (std::getline(dbFile, line)) {
-        std::istringstream iss(line);
-        std::string filepath, hash;
+        // Skip empty lines
+        if (line.empty()) continue;
+        
         size_t delimPos = line.find('|');
-        if (delimPos == std::string::npos) continue;
+        if (delimPos == std::string::npos) {
+            std::cerr << "Warning: Malformed database entry: " << line << std::endl;
+            continue;
+        }
 
-        filepath = line.substr(0, delimPos);
-        hash = line.substr(delimPos + 1);
+        std::string filepath = line.substr(0, delimPos);
+        std::string hash = line.substr(delimPos + 1);
+        
+        // Basic validation
+        if (filepath.empty() || hash.empty()) {
+            std::cerr << "Warning: Empty filepath or hash in entry: " << line << std::endl;
+            continue;
+        }
 
         fileHashMap[filepath] = hash;
     }
@@ -34,8 +46,8 @@ void FileManager::saveDatabase() {
         throw std::runtime_error("Cannot open database file for writing.");
     }
 
-    for (const auto& [filepath, hash] : fileHashMap) {
-        dbFile << filepath << "|" << hash << "\n";
+    for (const auto& entry : fileHashMap) {
+        dbFile << entry.first << "|" << entry.second << "\n";
     }
     dbFile.close();
 }

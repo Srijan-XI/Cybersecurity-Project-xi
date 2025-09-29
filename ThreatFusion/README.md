@@ -34,9 +34,9 @@ ThreatFusion/
 ## Prerequisites
 
 - C++ compiler supporting C++17 standard (e.g., `g++`)
-- Python 3.8+ (tested with Python 3.13.3)
+- Python 3.8+ (tested with Python 3.13.7)
 - Go programming language environment (for Go tools)
-- Required Python packages (none external in current scope)
+- Required Python packages: pandas, matplotlib, fpdf, scikit-learn
 
 ---
 

@@ -4,11 +4,20 @@
 #include <sstream>
 #include <iomanip>
 #include <vector>
+#include <stdexcept>
 
 std::string FileHasher::calculateSHA256(const std::string& filepath) {
+    if (filepath.empty()) {
+        throw std::runtime_error("Filepath cannot be empty");
+    }
+    
     std::ifstream file(filepath, std::ios::binary);
     if (!file) {
         throw std::runtime_error("Cannot open file: " + filepath);
+    }
+    
+    if (!file.good()) {
+        throw std::runtime_error("File is not accessible or corrupted: " + filepath);
     }
 
     SHA256_CTX sha256;
