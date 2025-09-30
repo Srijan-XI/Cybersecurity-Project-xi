@@ -1,3 +1,0 @@
-This is a sample text file for scanning.
-It contains some test data and patterns.
-Normal file content here.
