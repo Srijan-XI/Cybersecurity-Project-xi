@@ -1,0 +1,10 @@
+SSL/TLS Certificate Report
+========================================
+
+Host: meta.com
+Issuer: {b'C': b'US', b'O': b'DigiCert Inc', b'CN': b'DigiCert Global G2 TLS RSA SHA256 2020 CA1'}
+Subject: {b'C': b'US', b'ST': b'California', b'L': b'Menlo Park', b'O': b'Meta Platforms, Inc.', b'CN': b'*.meta.com'}
+Valid From: 2025-07-08
+Valid To: 2025-10-06
+Status: Expiring Soon (6 days left)
+

@@ -1,0 +1,12 @@
+colorama
+requests
+scapy
+pycryptodome
+pycryptodomex
+pyasn1
+pyasn1-modules
+dnspython
+cryptography
+netifaces
+pypcapfile
+scapy-http
