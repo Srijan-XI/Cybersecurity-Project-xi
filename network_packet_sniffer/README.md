@@ -33,7 +33,6 @@ All required packages are listed in `requirements.txt`:
 - `pyasn1` & `pyasn1-modules` - ASN.1 parsing
 - `dnspython` - DNS operations
 - `cryptography` - Cryptographic recipes
-- `netifaces` - Network interface information
 - `pypcapfile` - PCAP file handling
 - `scapy-http` - HTTP protocol support for Scapy
 
